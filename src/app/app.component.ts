@@ -1,7 +1,7 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 declare var require: any;
 const cytoscape = require('cytoscape');
-const domNode = require('../assets/cytoscape-node-html-label');
+const domNode = require('cytoscape-node-edge-html-label');
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -12,6 +12,7 @@ export class AppComponent implements OnInit {
   @ViewChild('cy') cyRef: ElementRef | undefined;
   cy: any;
   constructor() {}
+
   ngOnInit(): void {
     cytoscape.use(domNode);
     this.cy = cytoscape({
@@ -112,6 +113,7 @@ export class AppComponent implements OnInit {
         },
       ],
     });
+
     this.cy.nodeHtmlLabel([
       {
         query: 'edge', // cytoscape query selector
@@ -120,11 +122,13 @@ export class AppComponent implements OnInit {
         halignBox: 'center', // title vertical position. Can be 'left',''center, 'right'
         valignBox: 'center', // title relative box vertical position. Can be 'top',''center, 'bottom'
         cssClass: '', // any classes will be as attribute of <div> container for every title,
-        edgehtmlLocation: 'start', //location on edge to render html. Can be 'start','end','center'. 'center' will be default
+        edgehtmlLocation: 'center', //location on edge to render html. Can be 'start','end','center'. 'center' will be default
         edgehtmlTiltPoint1: 'sourceNode', // first point to get angle of tilt for html.Can be 'sourceNode','targetNode', control point (i.e 0,1,2...)
         edgehtmlTiltPoint2: 'targetNode', // second point to get angle of tilt for html.Can be 'sourceNode','targetNode', control point (i.e 0,1,2...)
         tpl(data: any) {
-          return '<div>this is div</div>';
+          return `<div style='background:greenyellow;color:'red'> this is a sample html <button onclick="console.log(
+            'button clicked'
+          )">click</button></div>`;
           // your html template here
         },
       },
