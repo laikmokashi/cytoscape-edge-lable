@@ -1,5 +1,5 @@
 {
-  "name": "edge-lable",
+  "name": "cytoscape-node-edge-html-lable-example",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",

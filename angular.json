@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "edge-lable": {
+    "cytoscape-node-edge-html-lable-example": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -60,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "edge-lable:build:production"
+              "browserTarget": "cytoscape-node-edge-html-lable-example:build:production"
             },
             "development": {
-              "browserTarget": "edge-lable:build:development"
+              "browserTarget": "cytoscape-node-edge-html-lable-example:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "edge-lable:build"
+            "browserTarget": "cytoscape-node-edge-html-lable-example:build"
           }
         },
         "test": {
