@@ -170,13 +170,8 @@ export class AppComponent implements OnInit {
         halignBox: 'center', // title vertical position. Can be 'left',''center, 'right'
         valignBox: 'center', // title relative box vertical position. Can be 'top',''center, 'bottom'
         cssClass: '', // any classes will be as attribute of <div> container for every title,
-        edgehtmlLocation: 'center', //location on edge to render html. Can be 'start','end','center'. 'center' will be default
-        edgehtmlTiltPoint1: 0, // first point to get angle of tilt for html.Can be 'sourceNode','targetNode', control point (i.e 0,1,2...)
-        edgehtmlTiltPoint2: 2, // second point to get angle of tilt for html.Can be 'sourceNode','targetNode', control point (i.e 0,1,2...)
         tpl(data: any) {
-          return `<div style='background:yellow'> 
-          <em>this is </em>
-          <div><strong>Node </strong><div>  
+          return `<div > node template 
           </div>`;
           // your html template here
         },
