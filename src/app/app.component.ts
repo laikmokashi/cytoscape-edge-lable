@@ -171,7 +171,9 @@ export class AppComponent implements OnInit {
         valignBox: 'center', // title relative box vertical position. Can be 'top',''center, 'bottom'
         cssClass: '', // any classes will be as attribute of <div> container for every title,
         tpl(data: any) {
-          return `<div > node template 
+          return `<div style='background:yellow'> 
+          <em>this is </em>
+          <div><strong>Node </strong><div>  
           </div>`;
           // your html template here
         },
